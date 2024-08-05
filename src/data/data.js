@@ -1,6 +1,5 @@
 export const users = [
-  { name: 'admin1',username: "admin1@gmail.com", ph:7123456787, password: "password123" },
-  {name: 'admin2',username: "admin2@gmail.com", ph:7123456787, password: "password123"},
+  { name: 'Manish',username: "manish@gmail.com", ph:7123456787, password: "password123" },
 ];
 
 export const drones = [
