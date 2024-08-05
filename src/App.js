@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react'
+import { DataContext } from './context/DataContext'
+import { Route, Routes } from 'react-router-dom'
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Login from './pages/Login/Login'
+import SignUp from './pages/SignUp/SignUp'
+import DashboardLayout from './pages/Dashboard/DashboardLayout';
+import DroneDetails from './pages/Dashboard/DroneDetails';
+import Maintenance from './pages/Dashboard/Maintenance';
+import './pages/Dashboard/ChartSetup.js'
 
-function App() {
+const App = () => {
+  const {isContextWorking,data,userList}=useContext(DataContext)
+  console.log(data,userList)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+<ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
+      <Routes>
+        {/* <Route path='/' element={<Login/>}/> */}
+        {/* <Route path='/signup' element={<SignUp/>}/> */}
+        <Route path='/' element={<DashboardLayout/>}/>
+        <Route path="/drone/:id" element={ <DroneDetails /> }/>
+           
+          <Route path="/maintenance" element={<Maintenance />}/>
+            
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
