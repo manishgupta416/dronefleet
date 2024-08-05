@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import logo from "../../assets/images/logo.png";
 import { DataContext } from "../../context/DataContext";
-import { ToastContainer, toast } from "react-toastify";
+import {  toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 
@@ -173,7 +173,7 @@ const SignUp = () => {
           Already have an account?{" "}
           <span 
           onClick={handleSignInClick}
-          className="mt-10 text-center text-sm text-gray-500 cursor-pointer font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+          className="mt-10 text-center text-sm  cursor-pointer font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
         >
           Sign in
         </span>

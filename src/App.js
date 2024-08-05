@@ -12,7 +12,7 @@ import "./pages/Dashboard/ChartSetup.js";
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 
 const App = () => {
-  const { isContextWorking, data, userList } = useContext(DataContext);
+  const {  data, userList } = useContext(DataContext);
   console.log(data, userList);
   return (
     <div>

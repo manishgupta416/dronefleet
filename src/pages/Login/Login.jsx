@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { useNavigate,useLocation } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "../../assets/images/logo.png";
 import { DataContext } from "../../context/DataContext";
@@ -13,7 +13,7 @@ const Login = () => {
   
   const location = useLocation();
   const navigate = useNavigate();
-  const { userList ,currentUser, setCurrentUser} = useContext(DataContext);
+  const { userList , setCurrentUser} = useContext(DataContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;

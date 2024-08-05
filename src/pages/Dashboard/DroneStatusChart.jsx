@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import { Pie } from 'react-chartjs-2';
-import { Typography } from '@mui/material';
 import { DataContext } from '../../context/DataContext';
 
 const DroneStatusChart = () => {

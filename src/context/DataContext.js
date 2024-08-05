@@ -13,7 +13,7 @@ export const DataProvider = ({ children }) => {
       value={{
         isContextWorking: "yea",
         userList,
-        data,currentUser, setCurrentUser
+        data,currentUser, setCurrentUser,setData,setUserList
       }}
     >
       {children}
