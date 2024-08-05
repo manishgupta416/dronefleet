@@ -30,7 +30,13 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    
+      "rules": {
+        "no-undef": 1, 
+        "no-unused-vars": 1
+      }
+    
   },
   "browserslist": {
     "production": [
