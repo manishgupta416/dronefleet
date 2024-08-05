@@ -6,6 +6,7 @@ import Aside from '../../components/Aside/Aside';
 import { useNavigate } from 'react-router-dom';
 
 const DroneDetails = () => {
+    const [isSidebarOpen, setSidebarOpen] = useState(false);
   const { data } = useContext(DataContext);
   const { id } = useParams();
   const drone = data?.find(d => d.id === id);
@@ -14,7 +15,7 @@ const DroneDetails = () => {
     return <div className="text-red-500 text-center text-xl">Drone not found</div>;
   }
   
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);

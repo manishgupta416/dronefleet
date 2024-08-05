@@ -5,9 +5,10 @@ import Header from '../../components/Header/Header';
 import Aside from '../../components/Aside/Aside';
 
 const Maintenance = () => {
+     const [isSidebarOpen, setSidebarOpen] = useState(false);
   const { data } = useContext(DataContext);
   const navigate = useNavigate(); 
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
+ 
 
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
