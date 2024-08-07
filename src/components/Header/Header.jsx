@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FiMenu } from "react-icons/fi";
 import { FiLogOut } from "react-icons/fi";
 import { DataContext } from "../../context/DataContext";
+import './Header.css'
 
 const Header = ({toggleSidebar}) => {
     const {  currentUser,setCurrentUser} = useContext(DataContext);
@@ -21,7 +22,7 @@ const Header = ({toggleSidebar}) => {
               <FiMenu />
             </i>
           </button>
-          <Link to="/" className="ml-4 text-xl font-bold hover:text-gray-200">
+          <Link to="/" className="ml-4 text-xl font-bold hover:text-gray-200 hide ">
             Drone Dashboard
           </Link>
         </div>

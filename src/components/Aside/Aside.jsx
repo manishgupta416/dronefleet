@@ -1,6 +1,14 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link ,useLocation} from 'react-router-dom';
 const Aside = ({ setSidebarOpen, isSidebarOpen }) => {
+  const location = useLocation();
+
+  const handleClick = (event, path) => {
+    if (location.pathname === path) {
+      event.preventDefault();
+      setSidebarOpen(false);
+    }
+  };
   return (
     <div>
       {" "}
@@ -18,7 +26,7 @@ const Aside = ({ setSidebarOpen, isSidebarOpen }) => {
               <Link
                 to="/"
                 className="block p-2 text-gray-700 hover:bg-gray-200 rounded"
-                onClick={() => setSidebarOpen(false)}
+                onClick={(event) => handleClick(event, '/')}
               >
                 Overview
               </Link>
@@ -27,7 +35,7 @@ const Aside = ({ setSidebarOpen, isSidebarOpen }) => {
               <Link
                 to="/maintenance"
                 className="block p-2 text-gray-700 hover:bg-gray-200 rounded"
-                onClick={() => setSidebarOpen(false)}
+                onClick={(event) => handleClick(event, '/maintenance')}
               >
                 Maintenance
               </Link>

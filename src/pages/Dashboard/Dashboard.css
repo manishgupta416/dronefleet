@@ -3,3 +3,16 @@
     width: 350px; 
     height: 300px;
   }
+
+  @media screen and (max-width: 640px) {
+    .maintence-container{
+      width: 96%;
+    }
+
+    .chart-container {
+      position: relative;
+      width: 250px; 
+      height: 300px;
+    }
+  
+  }
